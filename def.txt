@@ -1,4 +1,0 @@
-DEF file
-
-<index>
-</index>

@@ -1,0 +1,7 @@
+pages\SearchCustomerPage.class
+utility\ScreenshotHelper.class
+pages\LoginPage.class
+utility\Data.class
+utility\ReadConfig.class
+tests\BaseTest.class
+tests\SearchCustomer.class

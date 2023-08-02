@@ -1,0 +1,197 @@
+<html>
+	<head>
+		<title>Sample Test Page</title>
+		<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<style></style>
+	</head>
+	<body style="font-family: cursive;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-2 col-md-8" style="font-size: 30; margin-top: 40px; ">
+					Sample WebPage for Automation Testing
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12" style="font-size:20px; margin-top:40px;">
+					This is sample webpage with dummy elements that will help you in learning selenium automation.
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-12" style="font-size:15px;">
+					<b>This is sample text.</b>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-12" style="font-size:15px;">
+					<p> <b>Link : </b><a href="https://www.google.com/">This is a link</a></p>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-12" style="font-size:15px;">
+					<p><b>TextBox 1: </b><input id="fname" type="text" name="firstName" ></p>
+				</div>
+				<div class="col-md-12" style="font-size:15px;">
+					<p><b>TextBox 2: </b><input id="lname" type="text" name="firstName" ></p>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-12" style="font-size:15px;">
+					<p><b>Button : </b><button id="idOfButton" title="Click me!!" type="submit">Submit</button></p>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-12" style="font-size:15px;">
+					<p><b>Radio button : </b> 
+						<form action="#">
+							<input id="male" type="radio" name="gender" value="male" > Male  
+							<input id="female" type="radio" name="gender" value="female"> Female
+						</form>
+					</p>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-12" style="font-size:15px;">
+					<p><b>Checkbox :</b>
+						<form action="#">
+							<input type="checkbox" class="Automation" value="Automation"> Automation Testing
+							<input type="checkbox" class="Performance" value="Performance"> Performance Testing
+						</form>
+					</p>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-12" style="font-size:15px;">
+					<p><b>Drop down :</b>
+						<select id="testingDropdown">
+							<option id="automation" value="Automation">Automation Testing</option>
+							<option id="performance" value="Performance">Performance Testing</option>
+							<option id="manual" value="Manual">Manual Testing</option>
+							<option id="database" value="Database">Database Testing</option>
+						</select>
+					</p>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-12" style="font-size:15px;">
+					<p><b>Multi select :</b>
+			<select id="Browsers" class="input-xlarge" multiple="" name="Browsers">
+			<option id="Chrome" value="Google">Google Chrome</option>
+			<option id="Mozilla" value="Firefox">Mozilla Firefox</option>
+			<option id="IE" value="Microsoft">Microsoft IE</option>
+			<option id="Edge" value="MS">MS Edge</option>
+			<option id="Safari" value="MacOS">MacOS Safari</option>
+			</select>
+			</p>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-12" style="font-size:15px;">
+					<p><button id="dblClkBtn" ondblclick="alert('hi, JavaTpoint Testing');">Double-click to generate alert box</button></p>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-12" style="font-size:15px;">
+					<p><b>Click button to generate Alert box : </b>
+					  	<button onclick="alert('hi, Automation Testing');">Generate Alert Box</button>
+					</p>
+				</div>
+			</div>
+			<br>
+
+			<div class="row">
+				<div class="col-md-12" style="font-size:15px;">
+					<p> <b> Click button to generate Confirm box : </b>
+						<button onclick="generateConfirmBox()">Generate Confirm Box</button>
+					</p>
+					<p id="demo"></p>
+				</div>
+			</div>
+			<br>
+
+			<br>
+
+			<div class="row">
+				<div class="col-md-12" style="font-size:15px;">
+					<p> <b> Click button to generate Prompt box : </b>
+						<button onclick="generatePromptBox()">Generate Prompt Box</button>
+					</p>
+					<p id="demoPrompt"></p>
+				</div>
+			</div>
+			
+			<br>
+			<br>
+
+
+
+		</div>
+
+		<script>
+			function generateConfirmBox()
+			{
+				var x;
+				var r=confirm("Press a button!");
+				if (r==true)
+				{
+					x="You pressed OK!";
+				}
+				else
+				{
+					x="You pressed Cancel!";
+				}
+				document.getElementById("demo").innerHTML=x;
+			}
+
+			function allowDrop(ev)
+			{
+				ev.preventDefault();
+			}
+
+			function drag(ev)
+			{
+				ev.dataTransfer.setData("Text",ev.target.id);
+			}
+
+			function drop(ev)
+			{
+				ev.preventDefault();
+				var data=ev.dataTransfer.getData("Text");
+				ev.target.appendChild(document.getElementById(data));
+			}
+			
+			function generatePromptBox(){
+			var txt;
+			  var person = prompt("Please enter your name:", "");
+			  if (person == null || person == "") {
+				txt = "User cancelled the prompt.";
+			  } else {
+				txt = "Hello " + person + "! How are you today?";
+			  }
+			  document.getElementById("demoPrompt").innerHTML = txt;
+			}
+
+		</script>
+	</body>
+</html>

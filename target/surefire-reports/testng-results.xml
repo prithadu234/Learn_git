@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-02T08:58:10Z" name="Suite" finished-at="2023-08-02T08:58:40Z" duration-ms="30222">
+    <groups>
+    </groups>
+    <test started-at="2023-08-02T08:58:10Z" name="Test" finished-at="2023-08-02T08:58:40Z" duration-ms="30222">
+      <class name="tests.SearchCustomer">
+        <test-method is-config="true" signature="launchApp()[pri:0, instance:tests.SearchCustomer@27d5a580]" started-at="2023-08-02T16:58:10Z" name="launchApp" finished-at="2023-08-02T16:58:18Z" duration-ms="8107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApp -->
+        <test-method signature="searchCustomerbyEmail(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:tests.SearchCustomer@27d5a580]" started-at="2023-08-02T16:58:18Z" name="searchCustomerbyEmail" data-provider="smokeTestData" finished-at="2023-08-02T16:58:38Z" duration-ms="19938" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[admin@yourstore.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[admin@yourstore.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[admin@yourstore.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchCustomerbyEmail -->
+        <test-method is-config="true" signature="closingApp()[pri:0, instance:tests.SearchCustomer@27d5a580]" started-at="2023-08-02T16:58:38Z" name="closingApp" finished-at="2023-08-02T16:58:40Z" duration-ms="2145" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closingApp -->
+      </class> <!-- tests.SearchCustomer -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
